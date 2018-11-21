@@ -12,6 +12,8 @@
       <% @posts.each do |post| %>
       <div class="posted">
         <div class="content-box">
+          <h4><%= link_to "#{ post.user.name.capitalize }", profiles_show_path(id: post.user_id) %></h4>
+          <%= time_ago_in_words(post.created_at) %> ago.
         </div>
           <hr>
         <div class="content-box">

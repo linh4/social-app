@@ -5,8 +5,7 @@ class StalkZonesController < ApplicationController
     if params[:search]
       @users = User.find_all_by(params[:search])
     else
-     @users = User.where.not(id: @followees)
-     @followees = current_user.followees
+     @users = User.all
     end
   end
 end

@@ -15,6 +15,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   def self.find_all_by(search)
-    self.all.select { |name| name.name === search}
+    self.all.select { |name| name.name.downcase == search.downcase}
   end
 end
