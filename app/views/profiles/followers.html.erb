@@ -3,7 +3,7 @@
   <div class="row follow-row">
     <ul class="follow-people">
       <li>
-        <%= image_tag("na-#{follower.id}.jpg", size: "100x100") %>
+        <%= image_tag("https://raw.githubusercontent.com/linh4/stalk-zone/master/app/assets/images/na-#{follower.id}.jpg", size: "100x100") %>
         <%= link_to follower.name.capitalize, profiles_show_path(id: follower.id) %>
       </li>
     </ul>
