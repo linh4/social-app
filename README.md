@@ -1,6 +1,10 @@
 # STALK ZONE APP
 
 Stalk Zone is a social media app built with Ruby on Rails.
+
+<img src="/Stalk Zone Demo 1.png" /> 
+<img src="/Stalk Zone Demo 2.png" />
+
 - User can create new account, login and edit the profile.
 - User can find other users who use the app.
 - User can follow or unfollow other users.
