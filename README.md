@@ -1,24 +1,28 @@
-# README
+# STALK ZONE APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Stalk Zone is a social media app built with Ruby on Rails.
+- User can create new account, login and edit the profile.
+- User can find other users who use the app.
+- User can add follow or unfollow other users.
+- User can post and comment.
 
-Things you may want to cover:
+### Getting Started:
+First, install all the gems:
+```
+bundle install
+```
+Next, migrate the database:
+```
+rake db:migrate
+```
 
-* Ruby version
+Finally run the app in a local server:
+```
+rails server
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Future Plans:
+- User can upload profile picture
+- User has a like button
+- User can post pictures
+- Notification when someone follows current user.
