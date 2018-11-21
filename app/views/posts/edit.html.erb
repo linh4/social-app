@@ -1,0 +1,8 @@
+<div class="post-box" style="text-align: center; margin-top: 30px;">
+  <%= form_for @post do |f| %>
+  <div>
+    <%= f.text_area :content, class: "text-area", style: "width: 40%", rows: 4, placeholder: "Whats on your mind?"%>
+    <%= f.submit "Post", class: "btn btn-danger", style: "margin-bottom: 30px;" %>
+  </div>
+  <% end %>
+</div>

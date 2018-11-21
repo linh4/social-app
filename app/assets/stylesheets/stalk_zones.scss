@@ -1,0 +1,41 @@
+// Place all the styles related to the friend_zones controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search-box {
+  padding-left: 50px;
+}
+
+.search-box input {
+  height: 40px;
+}
+
+.f-col {
+  background-color: #ffe3e3;
+  height: 70vh;
+  margin-top: 20px;
+}
+
+.fe-col {
+  margin-top: 20px;
+  height: 70vh
+}
+
+h3 {
+  font-family: 'Abel', sans-serif;
+  color: #FF7373;
+  margin-top: 20px;
+}
+
+a {
+  color: grey;
+}
+
+a:hover {
+  color: #f6546a;
+  text-decoration: none;
+}
+
+.people-name {
+  margin-left: -50px;
+}

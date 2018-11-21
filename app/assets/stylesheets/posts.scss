@@ -1,0 +1,50 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.post-box {
+  border-style: solid;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.p-top {
+  margin-top: 30px;
+}
+
+.posted-cmt {
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border: solid 1px #FF7373;
+  margin-top: 30px;
+}
+
+.posted-cmt h4 {
+  margin-bottom: 0;
+}
+
+.posted-cmt extarea {
+  padding: 10px;
+}
+
+.posted-cmt a {
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #FF7373;
+}
+
+.posted-cmt a:hover {
+  text-decoration: none;
+  color: #cc5c5c;
+}
+
+.posted-cmt i {
+  margin-right: 20px;
+}
+
+
+hr {
+  width: 90%;
+  margin-top: 0;
+}

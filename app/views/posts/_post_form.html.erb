@@ -1,0 +1,8 @@
+<div class="post-box">
+  <%= form_for @post do |f| %>
+  <div>
+    <%= f.text_area :content, class: "text-area", rows: 4, placeholder: "What are you thinking now?"%>
+    <%= f.submit "Post", class: "btn btn-danger" %>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,73 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  text-align: center;
+}
+
+.row {
+  margin-left: -120px;
+  margin-right: -100px;
+}
+
+.custom-col {
+  padding-top :30px;
+}
+
+/* -------LIST FRIENDS*/
+
+.li-box {
+  text-align: left;
+  list-style-type: none;
+  color: #FF7373;
+}
+
+.li-box li a {
+  color: inherit;
+}
+
+.li-box li:hover,
+.li-box a:hover {
+  text-decoration: none;
+  color: #cc5c5c;
+}
+
+.friend-col {
+  margin-top: 20px;
+}
+
+.friend-col h3 {
+  margin-top: 10px;
+  font-family: 'Abel', sans-serif;
+  background-color: #ffc7c7;
+  font-size: 2em;
+}
+
+h3 {
+  padding: 10px;
+  font-family: 'Abel', sans-serif;
+}
+
+h4, h5 {
+  font-family: 'Abel', sans-serif;
+}
+
+.row.follow-row {
+  width: 70%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f6546a;
+}
+.follow-people {
+  margin: 30px auto;
+  list-style: none;
+}
+.follow-people img {
+  display: inline;
+}
+.follow-people a {
+  margin-left: 30px;
+}
+.fff {
+  text-align: center;
+}

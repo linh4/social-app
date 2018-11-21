@@ -1,0 +1,254 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+@import "profiles.scss";
+@import "posts.scss";
+@import "stalk_zones.scss";
+@import "followings.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Lateef|Abel|Monoton');
+
+html, body {
+  font-family: 'Lateef', sans-serif;
+}
+
+.img-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* --------------NAVBAR-------------- */
+.navbar {
+  padding: 0;
+}
+
+a.nav-link {
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: #FF7373;
+}
+
+
+/* ---------- HOMEPAGE--------------- */
+
+.welcome-page {
+  background: url(background-3000.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+div.text-box {
+  position: absolute;
+  width: 70%;
+  margin: 200px;
+  background-color: #fff;
+  border: 1px solid #FF7373;
+  border-radius: 20px;
+  opacity: 0.6;
+  text-align: center;
+  z-index: 1;
+}
+
+div.texts {
+  margin: 10%;
+  font-weight: bold;
+  color: #000;
+}
+
+div.texts h1 {
+  font-size: 2.8em;
+  font-family: 'Monoton', cursive;
+  color: #FF7373;
+}
+
+div.texts h3, a {
+  font-size: 2.4em;
+  margin-top: 15px;
+  font-family: 'Abel', sans-serif;
+}
+
+/* ---------------BUTTON----------- */
+
+.btn {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  background-color: #f6546a;
+  color: #fff;
+  border: none;
+  transform: scale(1.1);
+}
+
+/* --------LOGIN/SINGUP--------- */
+.background-sign{
+  position: absolute;
+  background: url(background-3000.jpeg);
+  top: -20px;
+  left: -20px;
+  right: -40px;
+  bottom: -20px;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  z-index: 0;
+}
+
+.style-image{
+  position: absolute;
+  top: calc(25% - 35px);
+  left: calc(50% - 255px);
+  z-index: 2;
+  width: 170px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.login{
+  position: absolute;
+  top: calc(15% - 50px);
+  left: calc(50% - 50px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+  color: #fff;
+}
+
+.login label {
+  margin-top: 10px;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+}
+
+.login input[type=text],
+input[type=email],
+input[type=password]{
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.sign-in{
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.sign-in:hover,
+.sign-in:active{
+  opacity: 0.8;
+}
+
+a {
+  margin-top: 0 !important
+}
+
+.login input[type=text]:focus
+[type=password]:focus,
+.sign-in:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+#error_explanation {
+  color: #000
+}
+
+
+/* -------FEED PAGE---------- */
+
+
+// post-form
+
+.post-box {
+  border: none;
+}
+
+.post-box .btn-danger {
+  width: 100px;
+}
+
+.text-area {
+  width: 100%;
+  border-radius: 10px;
+  border-color: #FF7373;
+}
+
+
+.posted {
+  background-color: #ffe3e3;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.posted h4 {
+  margin-bottom: 0;
+}
+
+textarea {
+  padding: 10px;
+}
+
+.content-box {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.posted a {
+  margin-top: 10px;
+  font-size: 1.3em;
+  color: #FF7373;
+}
+
+.posted a:hover {
+  text-decoration: none;
+  color: #cc5c5c;
+}
+
+.posted i {
+  margin-right: 20px;
+}
+
+
+hr {
+  width: 90%;
+  margin-top: 0;
+}

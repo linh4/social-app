@@ -1,0 +1,6 @@
+<%= form_for [@post, @post.comments.new] do |f| %>
+  <div style="display:inline">
+    <%= f.text_area :content, style: "width: 60%", placeholder: "Leave a comment", rows: 3, id: "comment_form" %>
+    <%= f.submit "Comment", class: "btn btn-danger", style: "margin-bottom: 30px;" %>
+  </div>
+<% end %>

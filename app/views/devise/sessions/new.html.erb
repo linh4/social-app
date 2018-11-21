@@ -1,0 +1,30 @@
+<div class="background-sign"></div>
+<div class="b-d"></div>
+<div>
+  <%= image_tag("friend-zone.png", :class => "style-image") %>
+</div>
+<br>
+
+<div class="login">
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="sign-in">
+
+    <%= f.submit "Log In", :class => "btn btn-danger" %>
+
+    <a href="/users/sign_up" class="btn btn-dark" role="button" aria-pressed="true">Sign Up</a>
+  </div>
+<% end %>
+  <%= devise_error_messages! %>
+</div>

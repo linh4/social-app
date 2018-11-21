@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+
+      <div class="posted p-top">
+        <div class="content-box">
+          <h4><%= link_to @post.user.name.capitalize, profiles_show_path(id: @post.user_id) %></h4>
+          <p><%= time_ago_in_words(@post.created_at) %> ago.</p>
+          </div>
+        <hr>
+
+        <div class="content-box">
+        <p><%= @post.content %> </p>
+        <% if current_user.id === @post.user_id %>
+          <%= link_to edit_post_path(@post) do %>
+            <i class="fas fa-marker"></i>
+          <% end %>
+          <%= link_to post_path(@post), method: :delete, data: {confirm: 'are you sure?'} do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        <% end %>
+
+      </div>
+    </div>
+
+    <div class="posted-cmt">
+      <div class="content-box">
+        <!-- comments -->
+        <h4 style="text-align:center">Comments</h4>
+        <!-- comments loop -->
+        <% @post.comments.each do |comment| %>
+          <h4><%= link_to "#{ comment.user.name.capitalize }", profiles_show_path( id: comment.user_id) %></h4>
+          <p><%= time_ago_in_words(comment.created_at) %> ago.</p>
+
+          <p><%= comment.content %></p>
+          <% if current_user.id === comment.user_id %>
+            <%= link_to [ comment.post, comment], method: :delete, remote: true do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          <% elsif current_user.id === comment.post.user_id %>
+            <%= link_to [ comment.post, comment], method: :delete, remote: true do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          <% end %>
+          <hr>
+          <% end %><!-- end comments loop -->
+          <%= render 'comment_form' %>
+        </div>
+      </div><!-- end comment -->
+    </div>
+
+
+    </div>
+  </div>
+</div>

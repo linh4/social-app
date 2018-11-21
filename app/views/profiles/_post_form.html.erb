@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+    <% if @post.errors.any? %>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    <% end %>
+  <div class="post-box">
+    <div>
+        <%= f.text_area :content, class: "text-area", rows: 5, placeholder: "What are you thinking now?" %>
+        <%= f.submit "Post", class: "btn btn-danger" %>
+      </div>
+<% end %>
+
+</div>

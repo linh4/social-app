@@ -1,0 +1,15 @@
+<!-- Profile details -->
+<%= image_tag("na-#{@user.id}.jpg", size: "300x400") %>
+<h3><%= @user.name.capitalize %></h3>
+<h5>Lives in: <%= @user.location %></h5>
+<h4>Bio: </h4>
+<h5><%= @user.bio %></h5>
+<hr>
+<% if @user.id === current_user.id %>
+  <%= link_to "Edit Profile", edit_user_registration_path(), class: "btn btn-danger"%>
+<% elsif @current_user_does_not_follow %>
+  <%= link_to "Follow", create_following_path(user_id: @user.id), method: :post, class: "btn btn-danger"  %>
+
+<% elsif @current_user_follows %>
+  <%= link_to "Unfollow", unfollow_path(user_id: @user.id), method: :delete, class: "btn btn-danger"  %>
+<% end %>

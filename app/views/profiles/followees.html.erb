@@ -1,0 +1,11 @@
+<h3 class="fff">Followees</h3>
+<% @user.followees.each do |followee| %>
+  <div class="row follow-row">
+    <ul class="follow-people">
+      <li>
+        <%= image_tag("na-#{followee.id}.jpg", size: "100x100") %>
+        <%= link_to followee.name.capitalize, profiles_show_path(id: followee.id) %>
+      </li>
+    </ul>
+  </div>
+<% end %>

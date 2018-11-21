@@ -1,0 +1,24 @@
+// Place all the styles related to the followings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.follows {
+  display: inline-block;
+  max-width: 50%;
+  margin: 0 10px;
+}
+.follows:first-of-type {
+  padding-right: 20px;
+  border-right: 1px solid #FF7373;
+}
+.follows a {
+  font-size: 20px;
+  display: block;
+  width: 50%;
+}
+
+
+.follows span {
+  font-size: 2em;
+  color: #f6546a;
+}

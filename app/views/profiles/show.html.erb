@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row justify-content-between">
+
+    <div class="col-3">
+      <%= render 'profile_form'%>
+    </div>
+
+    <div class="col-5 custom-col">
+      <!-- Users posts -->
+      <% if @user.id === current_user.id %>
+        <%= render "post_form" %>
+      <% end %>
+
+      <% @posts.each do |post| %>
+        <div class="posted">
+          <div class="content-box">
+            <h4><%= link_to "#{ post.user.name.capitalize }", profiles_show_path(id: post.user_id) %></h4>
+            <%= time_ago_in_words(post.created_at) %>
+            ago.
+          </div>
+          <hr>
+          <div class="content-box">
+            <p><%= post.content %>
+            </p>
+            <% if current_user.id == post.user_id %>
+              <%= link_to edit_post_path(post) do %>
+              <i class="fas fa-marker"></i>
+            <% end %>
+            <%= link_to post_path(post), method: :delete, data: {confirm: 'are you sure?'} do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        <% end %>
+        <!-- Comment button -->
+        <%= link_to post_path(post) do %>
+          <i class="fa fa-comment"></i>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- show followers and followees -->
+<div class="col-3 friend-col">
+  <h3>Following</h3>
+    <div class="follows">
+        <%= link_to "Followers", followers_path(@user), class: "link" %>
+        <span><%= @user.followers.length %></span>
+    </div>
+    <div class="follows">
+      <%= link_to "Followees", followees_path(@user), class: "link" %>
+      <span><%= @user.followees.length %></span>
+    </div>
+</div>
